@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dentist_Build", "Dentist_Build\Dentist_Build.csproj", "{E494EA48-22C9-409C-9275-6693CD30D747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E494EA48-22C9-409C-9275-6693CD30D747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E494EA48-22C9-409C-9275-6693CD30D747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E494EA48-22C9-409C-9275-6693CD30D747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E494EA48-22C9-409C-9275-6693CD30D747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
