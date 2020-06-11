@@ -26,21 +26,10 @@ namespace Dentist_Build
         }
 
 
-        public abstract void Introduce();
+        public abstract void ShowRecord();
         
     }
 
 
-
-    public class Patient : User
-    {
-        public Patient(string Name, string Address) : base(Name, Address)
-        {
-        }
-
-        public override void Introduce()
-        {
-            Console.WriteLine("Hello, I am {0}, I live at {1}", Name, Address);
-        }
-    }
+ 
 }

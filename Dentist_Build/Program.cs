@@ -6,11 +6,16 @@ namespace Dentist_Build
     {
         static void Main(string[] args)
         {
+
+            InitialiseData.Initialise();
+            
+            CLI.CreateNewPatient();
+            
+            PatientRecords.ShowAllRecords();
+
+
            
 
-            Patient patient1 = new Patient("Jim", "Taunton");
-
-            patient1.Introduce();
         }
     }
 }
