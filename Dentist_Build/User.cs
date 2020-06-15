@@ -4,19 +4,30 @@ namespace Dentist_Build
     public abstract class User
     {
 
-        private string name;
+        private string firstname;
+        private string surname;
         private string address;
+        private DateTime dob;
 
-        public User(string n, string a)
+
+        public User(string FirstName, string Surname, string Address, DateTime DOB)
         {
-            Name = n;
-            address = a;
+            this.firstname = FirstName;
+            this.surname = Surname;
+            this.address = Address;
+            this.Dob = DOB;
         }
 
-        public string Name
+        public string FirstName
         {
-            get { return name; }
-            set { name = value; }
+            get { return firstname; }
+            set { firstname = value; }
+        }
+
+        public string Surname
+        {
+            get { return surname; }
+            set { surname = value; }
         }
 
         public string Address
@@ -25,6 +36,10 @@ namespace Dentist_Build
             set { address = value; }
         }
 
+        public DateTime Dob {
+            get => dob;
+            set => dob = value;
+        }
 
         public abstract void ShowRecord();
         

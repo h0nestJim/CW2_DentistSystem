@@ -8,13 +8,15 @@ namespace Dentist_Build
         {
 
             InitialiseData.Initialise();
-            
-            CLI.CreateNewPatient();
-            
-            PatientRecords.ShowAllRecords();
+
+            //CLI.CreateNewPatient();
+            CLI.CreateNewStaff();
+
+            CentralisedRecords.ShowAllActiveStaff();
+            //CentralisedRecords.ShowAllPatientRecords();
 
 
-           
+
 
         }
     }
