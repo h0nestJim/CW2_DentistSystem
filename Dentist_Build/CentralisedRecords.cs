@@ -70,6 +70,7 @@ namespace Dentist_Build
 
         public static void ShowAllActiveStaff()
         {
+
             foreach (Staff staff in StaffListRecords)
             {
                 Console.WriteLine("Staff Record Details:\nSurname: {0}\nFirst Name: {1}\nAddress: " +
@@ -78,6 +79,9 @@ namespace Dentist_Build
 
 
             }
+
+
+
         }
 
     }
