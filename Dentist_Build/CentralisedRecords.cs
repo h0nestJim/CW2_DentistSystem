@@ -49,6 +49,45 @@ namespace Dentist_Build
 
         }
 
+        //used to assign a patient to a dentist that exists within centralised records
+        public static Staff AssignDentist(Practice practice)
+        {
+            while (true)
+            {
+                Console.WriteLine("Which Dentist would you like to assign this Patient?\nAvailable Dentists at this Practice:\n");
+                Console.WriteLine("Select with numerical input:\n");
+
+                for (int i = 0; i < practice.ActivePracticeStaff.Count; i++)
+                {
+                    Console.WriteLine("{0}: Dr. {1}", i, practice.ActivePracticeStaff[i].Surname);
+                }
+                int choice = Convert.ToInt16(Console.ReadLine());
+
+                return practice.ActivePracticeStaff[choice];
+            }
+        }
+
+        //used to assign a patient with 
+        public static Practice AssignPractice()
+        {
+            Console.WriteLine("Which Practice will this patient access?");
+            string location = Console.ReadLine();
+            while (true)
+            {
+                for (int i = 0; i < PracticeDirectory.Count; i++)
+                {
+                    if (PracticeDirectory[i].location.Equals(location))
+                    {
+                        return PracticeDirectory[i].GetData();
+
+                    }
+                }
+
+                Console.WriteLine("!!! Warning Practice Not Found !!!\n*****Please Retype Practice Name****\n");
+                location = Console.ReadLine();
+            }
+        }
+
         public static void SearchPatientRecords()
         {
             //script to search records/Patient List
@@ -63,7 +102,7 @@ namespace Dentist_Build
             foreach (Patient patient in PatientRecordsDatabase)
             {
                 Console.WriteLine("Patient Record Details:\nSurname: {0}\nFirst Name: {1}\nAddress: " +
-                    "{2}\nContact Number: {3}\n\nEnd of Patient Record\n\n", patient.FirstName, patient.Surname, patient.Address, patient.Dob.ToString("dd/MM/yy"), patient.contactnumber);
+                    "{2}\nContact Number: {3}\nDate of Birth: {4}\nAssigned Dentist: {5}\n\nEnd of Patient Record\n\n", patient.Surname, patient.FirstName, patient.Address, patient.contactnumber, patient.Dob.ToString("dd/MM/yy"), patient.GetDentist());
 
             }
         }

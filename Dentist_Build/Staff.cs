@@ -30,7 +30,7 @@ namespace Dentist_Build
             this.practice = Practice;
             GenerateCredentials();
             CentralisedRecords.SubmitNewStaff(this);
-
+            practice.ActivePracticeStaff.Add(this);
         }
 
         private void GenerateCredentials()
@@ -47,6 +47,9 @@ namespace Dentist_Build
                 "{4}\n\n\n************\nEnd of Record\n************\n", Surname, FirstName, username, emailAddress, jobTitle);
         }
 
-
+        public string GetName()
+        {
+            return username;
+        }
     }
 }
