@@ -74,10 +74,11 @@ namespace Dentist_Build
             string note = Console.ReadLine();
 
             Console.WriteLine("Input treatment Band:/n1: Band 1\n2: Band 2\n3: Band 3");
-            int band = Convert.ToInt16(Console.ReadLine()) - 1;
+            Treatment band = (Treatment)Convert.ToInt16(Console.ReadLine()) - 1;
 
+            Console.WriteLine(band);
 
-            ex.practice.SubmitAppointment(new Appointment(ex, appdate, ex.GetDentistObj(), Treatment.Band_1, note));
+            ex.practice.SubmitAppointment(new Appointment(ex, appdate, ex.GetDentistObj(), band, note));
 
         }
 

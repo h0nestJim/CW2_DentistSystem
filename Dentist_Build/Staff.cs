@@ -45,5 +45,10 @@ namespace Dentist_Build
         {
             return username;
         }
+
+        public bool CheckPassword(string Password)
+        {
+            return Password == password;
+        }
     }
 }
