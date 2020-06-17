@@ -4,7 +4,7 @@ namespace Dentist_Build
 {
     public class Patient : User
     {
-
+        //
         public long contactnumber;
         private Staff assignedDentist;
         private Practice practice;

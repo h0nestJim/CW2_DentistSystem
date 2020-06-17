@@ -3,7 +3,7 @@ namespace Dentist_Build
 {
     public abstract class User
     {
-
+        //
         private string firstname;
         private string surname;
         private string address;
@@ -36,15 +36,16 @@ namespace Dentist_Build
             set { address = value; }
         }
 
-        public DateTime Dob {
+        public DateTime Dob
+        {
             get => dob;
             set => dob = value;
         }
 
         public abstract void ShowRecord();
-        
+
     }
 
 
- 
+
 }
