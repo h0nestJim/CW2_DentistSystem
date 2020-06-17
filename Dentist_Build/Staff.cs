@@ -2,13 +2,7 @@
 namespace Dentist_Build
 {
     //
-    public enum Role
-    {
-        Admin,
-        Dentist,
-        Nurse,
-        Secretary
-    }
+
 
     public class Staff : User
     {

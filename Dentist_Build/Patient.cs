@@ -7,8 +7,9 @@ namespace Dentist_Build
         //
         public long contactnumber;
         private Staff assignedDentist;
-        private Practice practice;
+        public Practice practice;
         private List<string> patientNotes = new List<string>();
+
 
         //Constructor used to create new Patient during software operation
         public Patient(string FirstName, string Surname, string Address, DateTime DOB, long num) : base(FirstName, Surname, Address, DOB)
@@ -36,6 +37,11 @@ namespace Dentist_Build
         public string GetDentist()
         {
             return assignedDentist.Surname;
+        }
+
+        public Staff GetDentistObj()
+        {
+            return assignedDentist;
         }
     }
 }

@@ -89,10 +89,24 @@ namespace Dentist_Build
             }
         }
 
-        public static void SearchPatientRecords()
+        public static Patient SearchPatientRecords(string parameter)
         {
-            //script to search records/Patient List
+            while (true)
+            {
+                foreach (Patient patient in PatientRecordsDatabase)
+                {
+                    if (patient.Surname.Equals(parameter))
+                    {
+                        return patient;
+                    }
+
+                }
+                Console.WriteLine("!!! Warning Patient Not Found !!!\n*****Please Retype Practice Name****\n");
+                parameter = Console.ReadLine();
+            }
         }
+
+
         public static void SearchStaffRecords()
         {
             //script to search records/Patient List

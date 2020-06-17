@@ -48,7 +48,7 @@ namespace Dentist_Build
               new DateTime(10 / 04 / 87), 01823333333, Role.Dentist, CentralisedRecords.FindPractice("Bridgwater"));
 
             //Initialise Patient Records
-            Patient Shaunj = new Patient("Shaun", "Jim", "12 Fake Street, Taunton, TA1 1NN", new DateTime(27 / 10 / 1989), 07001001002, taunton, Sansom);
+            Patient Shaunj = new Patient("Jim", "Shaun", "12 Fake Street, Taunton, TA1 1NN", new DateTime(27 / 10 / 1989), 07001001002, taunton, Sansom);
 
         }
 
