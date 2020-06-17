@@ -6,13 +6,40 @@ namespace Dentist_Build
     {
         public static void Start()
         {
+            Console.WriteLine("********************\nPlease Login to myDentist.\n********************\nUsername: ");
+            string username = Console.ReadLine();
+            Console.WriteLine("Password: ");
+            string password = Console.ReadLine();
+
+            Authenticator.Authenticate(username, password);
+
+
             //demand login and call authenticator
         }
 
 
-        public static void Menu()
+        public static void SysAdminMenu()
         {
             //show menu for staff type
+            Console.WriteLine("WELCOME TO ADMIN MAIN MENU");
+        }
+
+        public static void DentistMenu()
+        {
+            //show menu for staff type
+            Console.WriteLine("WELCOME TO DENTIST MAIN MENU");
+        }
+
+        public static void NurseMenu()
+        {
+            //show menu for staff type
+            Console.WriteLine("WELCOME TO NURSE MAIN MENU");
+        }
+
+        public static void ReceptionistMenu()
+        {
+            //show menu for staff type
+            Console.WriteLine("WELCOME TO RECEPTION MAIN MENU");
         }
 
 
@@ -35,9 +62,9 @@ namespace Dentist_Build
         public static void CreateNewStaff()
         {
             Console.WriteLine("     *******************     \nCreating New Staff Record:\n     *******************     \nEnter Staff Surname:\n");
-            string surname = Console.ReadLine();
+            string surname = Console.ReadLine().ToLower();
             Console.WriteLine("\nEnter Staff First Name:\n");
-            string firstname = Console.ReadLine();
+            string firstname = Console.ReadLine().ToLower();
             Console.WriteLine("\nEnter Staff Date of Birth in the format [DD/MM/YY]:\n");
             DateTime dob = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("\nEnter Staff Address and Postcode:\n");
@@ -49,9 +76,12 @@ namespace Dentist_Build
             Console.WriteLine("\nWhich Practice is Staff member's princple Practice\n");
             string location = Console.ReadLine();
 
+            Console.WriteLine("Set Staff Member's Primary Job Role\n1: System Admin\n2: Dentist\n3: Nurse\n4:Receptionist\n");
+            Role role = (Role)Convert.ToInt16(Console.ReadLine());
 
 
-            CentralisedRecords.SubmitNewStaff(new Staff(firstname, surname, address, dob, number, Role.Nurse, CentralisedRecords.FindPractice(location)));
+
+            CentralisedRecords.SubmitNewStaff(new Staff(firstname, surname, address, dob, number, role, CentralisedRecords.FindPractice(location)));
 
 
 

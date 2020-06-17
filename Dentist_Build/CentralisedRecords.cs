@@ -107,9 +107,21 @@ namespace Dentist_Build
         }
 
 
-        public static void SearchStaffRecords()
+        public static Staff SearchStaffRecords(string username)
         {
-            //script to search records/Patient List
+            while (true)
+            {
+                foreach (Staff staffmember in StaffListRecords)
+                {
+                    if (staffmember.username.Equals(username))
+                    {
+                        return staffmember;
+                    }
+
+                }
+                Console.WriteLine("!!! Warning Staff Username Not Recognised !!!\n*****Please Retype Username****\n");
+                username = Console.ReadLine();
+            }
         }
 
         public static void ShowAllPatientRecords()

@@ -10,6 +10,7 @@ namespace Dentist_Build
             InitialiseData.Initialise();
 
 
+            CLI.Start();
 
 
             CLI.CreateNewPatient();

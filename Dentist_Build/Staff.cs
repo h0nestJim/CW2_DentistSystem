@@ -7,7 +7,7 @@ namespace Dentist_Build
     public class Staff : User
     {
 
-        private string username;
+        public string username;
         private string password;
         public string emailAddress;
         private long contactNumber;
@@ -30,6 +30,7 @@ namespace Dentist_Build
         private void GenerateCredentials()
         {
             this.username = Surname + FirstName[0];
+            username.ToLower();
             this.password = "0000";
             this.emailAddress = username + "@mydentist.nhs.uk";
         }
@@ -49,6 +50,12 @@ namespace Dentist_Build
         public bool CheckPassword(string Password)
         {
             return Password == password;
+        }
+
+        public void SetNewPassword()
+        {
+            Console.WriteLine("First Login Requires a new password\nPlease Enter your new password!");
+            password = Console.ReadLine();
         }
     }
 }
